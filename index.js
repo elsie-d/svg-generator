@@ -1,3 +1,5 @@
+// Runs the application using imports from lib/
+
 const { default: inquirer } = require('inquirer')
 
 console.log('hello world!')

@@ -4,8 +4,8 @@
 
 console.log('hello world!')
 inquire = require('inquirer')
+shapes = require('./lib/Shapes')
 fs = require('fs')
-//svgBuilder = require('svg-builder')
 
 
 // GIVEN a command-line application that accepts user input //
@@ -69,16 +69,17 @@ const questions =
     }]
 
    
-
+    function writeToFile(fileName, data){
+        return fs.writeFile(fileName, data, (err) => 
+        err ? console.log(err): console.log(`SVG File is ready`))
+    }
    
     function init() {
         inquire.prompt(questions)
         .then((answers) => {
-           // writeToFile("logo.svg", generateSVG({ ...answers }));
+        writeToFile("./examples/logo.svg",generateShape({ ...answers }));
           });
-        //.then(console.log('test 1 passed')) 
-        //.then((answers) => {
-        //writeToFile();
+    
         };
       
    init()     

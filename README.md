@@ -14,9 +14,9 @@ With this app, the user will be prompted with four questions that will detrmine 
         
 ## Installation
 **Node JS**
--npm i 
--npm i inquirer@8.2.4
--npm install --save-dev jest
+- npm i 
+- npm i inquirer@8.2.4
+- npm install --save-dev jest
         
         
 ## Usage

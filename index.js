@@ -1,13 +1,7 @@
 // Runs the application using imports from lib/
 
-const { error } = require('console');
-
-//const { default: inquirer } = require('inquirer')
-
-console.log('hello world!')
 const inquire = require('inquirer')
-const {Shapes, generateSVG} = require('./lib/shapes')
-const fs = require('fs')
+const { generateSVG} = require('./lib/shapes')
 console.log(generateSVG)
 
 // GIVEN a command-line application that accepts user input //
@@ -70,94 +64,6 @@ const questions =
         }
     }]
 
-
-
-/* // Parent
-class Shapes {
-    constructor(fillColor, txt, txtColor) {
-      this.fillColor = fillColor;
-      this.txt = txt;
-      this.txtColor = txtColor;
-    } 
-    render() {console.log('ALERT: No shape detected, cannot render')}
-  }
-  
-
-// Children/ Extensions of Parent
-
-  class Triangle extends Shapes {
-    constructor(fillColor, txt, txtColor) {
-      super(fillColor);
-      super(txt);
-      super(txtColor);
-    } 
-      render() {
-        return ` <svg version="1.1" 
-        width="300" height="200"
-        xmlns="http://www.w3.org/2000/svg">
-        <polygon points="100, 15 200, 200 0, 200" fill="${this.fillColor}"/>
-        <text x="100" y="185" font-size="70" text-anchor="middle" fill="${this.txtColor}">${this.txt}</text>
-    </svg>`
-    };
-    
-  }
-  class Circle extends Shapes {
-    constructor(fillColor, txt, txtColor) {
-      super(fillColor);
-      super(txt);
-      super(txtColor);
-    } 
-       render() {
-       return `<svg version="1.1" 
-       width="300" height="200"
-       xmlns="http://www.w3.org/2000/svg">
-       <circle cx="150" cy="100" r="100" fill="${this.fillColor}" />
-       <text x="100" y="185" font-size="70" text-anchor="middle" fill="${this.txtColor}">${this.txt}</text>
-       </svg>`
-     } 
-   }
-
-class Square extends Shapes {
-  constructor(fillColor, txt, txtColor) {
-    super(fillColor);
-    super(txt);
-    super(txtColor);
-  } 
-      render() {
-        return `
-        <svg version="1.1" 
-        width="300" height="200"
-        xmlns="http://www.w3.org/2000/svg">
-        <rect width="200" height="200" fill="${this.fillColor}"/>   
-        <text x="100" y="185" font-size="70" text-anchor="middle" fill="${this.txtColor}">${this.txt}</text>
-        </svg>`
-      } 
-   }
-  
-
-
-   // Create Requested Shape & Text
-  
-    function generateShape(answer){
-    if(answer.shape === Triangle){
-      let reqShape = new Triangle (answer.fillColor, answer.txt, answer.txtColor)
-      return reqShape.render();
-    }
-    if(answer.shape === Circle){
-      let reqShape = new Circle (answer.fillColor, answer.txt, answer.txtColor)
-      return reqShape.render();
-    }
-    if(answer.shape === Square){
-      let reqShape = new Square (answer.fillColor, answer.txt, answer.txtColor)
-      return reqShape.render();
-    }
-   }; 
-   
-   function generateSVG(answer){
-    const svg = generateShape(answer);
-    fs.writeFile("./examples/logo.svg", svg, () => console.log('SVG File is ready'))
-
-   }; */
 
 
    

@@ -28,6 +28,8 @@ To use this app:
 5. Follow prompts.
 6. Generated logo will save in ./examples/logo.svg
 
+## Demo
+[Watch demo here](https://drive.google.com/file/d/1Wsq1qSsdfaMiynZHEx5UICZBV20xoG4I/view)
         
 ## Contributions
 Feel free to fork this project and suggest/request upgrades.
